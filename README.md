@@ -24,6 +24,14 @@ for more information, please refer to https://fibos.io/docs/guide/basic/install.
 
 ## Usage
 
+Put the following javascript code into a file named main.js, run with fibos once the code is ready:
+
+```shell
+fibos main.js
+```
+
+### Init Client
+
 Init fibos client
 
 ```javascript
@@ -49,7 +57,6 @@ console.log("export FIBOS_PUBKEY=" + res.pubkey);
 ```
 
 Save it into a secure key named fibos.key, and append your EOS private key:
-
 ```shell
 export FIBOS_PRIKEY=xxx
 export FIBOS_PUBKEY=xxx
@@ -97,6 +104,7 @@ console.log(res);
 
 ### Sell Ram
 
+Sell ram in bytes:
 ```javascript
 var res = client.sellram(config.fibosAccount, 1048576)
 console.log(res);
