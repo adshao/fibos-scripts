@@ -112,7 +112,7 @@ console.log(client.getAccount(config.fibosAccount));
 
 If this script is helpful to you, you can donate me with a cup of coffee:
 
-EOS Address: adshaoadshao
-FO Address: adshaoadshao
+- EOS Address: adshaoadshao
+- FO Address: adshaoadshao
 
 Thanks, good luck!
