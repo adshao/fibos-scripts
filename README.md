@@ -95,6 +95,13 @@ var res = client.buyram(config.fibosAccount, config.fibosAccount, "1.0000 FO");
 console.log(res);
 ```
 
+### Sell Ram
+
+```javascript
+var res = client.sellram(config.fibosAccount, 1048576)
+console.log(res);
+```
+
 ### Show Ram Price
 
 ```javascript

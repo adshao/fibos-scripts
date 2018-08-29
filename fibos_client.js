@@ -98,6 +98,12 @@ this.buyram = function(payer, receiver, value) {
     return res;
 };
 
+this.sellram = function(receiver, bytes) {
+    var self = this;
+    var res = self.fibosClient.sellramSync(receiver, bytes)
+    return res
+}
+
 this.getRamPrice = function() {
     var self = this;
     var rs = self.fibosClient.getTableRowsSync(true, "eosio", "eosio", "rammarket");
