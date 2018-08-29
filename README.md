@@ -1,5 +1,21 @@
 # FIBOS Registration Scripts
 
+## Run with Docker
+
+Docker is required before running following command, please refer to https://docs.docker.com/install/ to install docker.
+
+One line installation:
+
+```shell
+git clone https://github.com/adshao/fibos-scripts && cd fibos-scripts && docker run -it --rm -v `pwd`:/usr/src/app -w /usr/src/app adshao/fibos /bin/bash
+```
+or docker run if you have already cloned this repo:
+```shell
+docker run -it --rm -v `pwd`:/usr/src/app -w /usr/src/app adshao/fibos /bin/bash
+```
+
+Goto Usage section to continue the journey.
+
 ## Pre-installation
 
 ### Install fibos
