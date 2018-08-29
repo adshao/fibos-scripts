@@ -81,7 +81,7 @@ var res = client.getBalance(config.fibosAccount);
 console.log(res);
 ```
 
-### Exchange EOS for FO
+### Exchange EOS to FO
 
 ```javascript
 var res = client.exchangeFO("1.0000 EOS");
@@ -114,6 +114,24 @@ Check your ram info from account:
 ```javascript
 console.log(client.getAccount(config.fibosAccount));
 ```
+
+### Exchange FO to EOS
+
+In case you want to exchange FO to EOS:
+```javascript
+var res = client.exchangeEOS("1.0000 FO");
+console.log(res);
+```
+
+### Withdraw EOS
+
+Transfer EOS@fibos to EOS mainnet:
+```javascript
+var res = client.withdrawEOS("0.0012 EOS")
+console.log(res);
+```
+
+Please test with a small amount to make sure everything is OK before transfering your EOS.
 
 ## Donate
 

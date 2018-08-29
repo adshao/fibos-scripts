@@ -75,6 +75,16 @@ this.transferEOS = function(value) {
     return res;
 };
 
+this.withdrawEOS = function(value) {
+    var self = this;
+    var fibosAccount = self.fibosAccount;
+    var memo = self.eosAccount;
+    var fibosRemoteAccount = cfg.fibos_remote_account;
+    var ctx = self.fibosClient.contractSync("eosio.token");
+    var res = ctx.transferSync(fibosAccount, fibosRemoteAccount, value, memo);
+    return res;
+}
+
 this.getBalance = function(account) {
     var self = this;
     var targetAccount = account || self.fibosAccount;
@@ -90,6 +100,15 @@ this.exchangeFO = function(value) {
     });
     return res;
 };
+
+this.exchangeEOS = function(value) {
+    var self = this;
+    let ctx = self.fibosClient.contractSync("eosio.token");
+    var res = ctx.exchangeSync(self.fibosAccount, value + "@eosio", `0.0000 EOS@eosio`, `exchange FO to EOS`, {
+        authorization: self.fibosAccount
+    });
+    return res;
+}
 
 // "acount", "acount", "100.0000 FO"
 this.buyram = function(payer, receiver, value) {
