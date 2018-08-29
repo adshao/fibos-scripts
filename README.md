@@ -7,11 +7,12 @@ Docker is required before running following command, please refer to https://doc
 One line installation:
 
 ```shell
-git clone https://github.com/adshao/fibos-scripts && cd fibos-scripts && docker run -it --rm -v `pwd`:/usr/src/app -w /usr/src/app adshao/fibos /bin/bash
+git clone https://github.com/adshao/fibos-scripts && cd fibos-scripts && alias fibos="docker run -it --rm -v `pwd`:/usr/src/app -w /usr/src/app adshao/fibos fibos"
 ```
-or docker run if you have already cloned this repo:
+
+or just set alias if you have already cloned this repo:
 ```shell
-docker run -it --rm -v `pwd`:/usr/src/app -w /usr/src/app adshao/fibos /bin/bash
+alias fibos="docker run -it --rm -v `pwd`:/usr/src/app -w /usr/src/app adshao/fibos fibos"
 ```
 
 Goto Usage section to continue the journey.
