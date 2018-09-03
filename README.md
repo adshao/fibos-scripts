@@ -156,7 +156,7 @@ var res = client.withdrawEOS("0.0012 EOS")
 console.log(res);
 ```
 
-Please test with a small amount to make sure everything is OK before transfering your EOS.
+Please test with a small amount to make sure everything is OK before transferring your EOS.
 
 ## Donate
 
